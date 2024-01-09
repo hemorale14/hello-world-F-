@@ -1,5 +1,12 @@
 #See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
+# Construir imagen y cargar la aplicación
+#docker build -f "WebApi\Dockerfile" -t hemorale14/fsharp-web-api:1.0.0 .
+# Enviar la imagen a un repositorio público de Docker Hub
+#docker push hemorale14/fsharp-web-api:1.0.0
+# Levantar la aplicación y hacer port-forwarding para visualizar la API en local sobre el puerto 9003
+#docker run --name my-fsharp-web-api -dp 9003:8080 hemorale14/fsharp-web-api:1.0.0
+
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER app
 WORKDIR /app
